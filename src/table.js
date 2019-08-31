@@ -18,7 +18,7 @@ function Table(props) {
             <table>
                 <tbody>
                 <tr>
-                    {columns.map((th, key) => (
+                    {props.columns.map((th, key) => (
                         <th key={key}>{th.title}</th>
                     ))}
                 </tr>
@@ -26,7 +26,7 @@ function Table(props) {
                 {/* generating data rows */}
                 {data.map((dr, key) => (
                     <tr key={key}>
-                        {columns.map((col, index) => (
+                        {props.columns.map((col, index) => (
                             <td key={index}>
                                 {
                                     // the "Cell" method has high priority than "accessor" selector
